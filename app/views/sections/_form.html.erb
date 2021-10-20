@@ -1,0 +1,17 @@
+<h1>New Section</h1>
+
+<%= form_with model: @section do |sec| %>
+  <div>
+    <%= sec.label :title %><br>
+    <%= sec.text_field :title %>
+  </div>
+
+  <div>
+    <%= sec.label :position %><br>
+    <%= sec.text_area :position%>
+  </div>
+
+  <div>
+    <%= sec.submit %>
+  </div>
+<% end %>

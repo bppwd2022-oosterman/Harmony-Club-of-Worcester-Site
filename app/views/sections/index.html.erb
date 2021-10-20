@@ -1,0 +1,10 @@
+<h1>INDEX</h1>
+<ul>
+<% @sections.each do |sec|%>
+    <li> 
+        <%=link_to 'show', section_path(sec.id)%>
+        <%=sec.title%>
+    </li>
+<%end%>
+<%= link_to "NEW", new_section_path %>
+</ul>
