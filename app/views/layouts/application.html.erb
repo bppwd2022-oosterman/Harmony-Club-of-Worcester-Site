@@ -67,8 +67,15 @@
                 </div>
             </div>
         </nav>
+        
   
   <div style="background-color: #B0C4DE">
+  <% if notice %>
+  <p class="alert alert-success"><%= notice %></p>
+<% end %>
+<% if alert %>
+  <p class="alert alert-danger"><%= alert %></p>
+<% end %>
     <%= yield %>
     </div>  
     <footer class="py-5" style="background-color: #15173d">
