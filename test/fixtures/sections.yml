@@ -1,13 +1,13 @@
 # Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  location: 
-  title: 
+  location: MyString
+  title: MyString
   visible: false
-  position: 
+  position: 1
 
 two:
-  location: 
-  title: 
+  location: MyString
+  title: MyString
   visible: false
-  position: 
+  position: 1
