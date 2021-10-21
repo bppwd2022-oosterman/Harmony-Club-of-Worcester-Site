@@ -11,42 +11,56 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= form.label :title %>
-    <%= form.text_field :title %>
-  </div>
 
-  <div class="field">
-    <%= form.label :section_id %>
-    <%= form.number_field :section_id %>
-  </div>
 
-  <div class="field">
-    <%= form.label :page_type %>
-    <%= form.text_field :page_type %>
-  </div>
+<form>
+  <div class="card" style="background-color:aliceblue">
+    <div class="mb-3 p-5">
+      <%= form.label :title, class: "form-label"%>
+      <%= form.text_field :title, class: "form-control" %>
+      
+      
+    </div>
+    <div class="mb-3 p-5">
+      <%= form.label :permalink, class: "form-label"%>
+      <%= form.text_field :permalink, class: "form-control" %>
+      
+      
+    </div>
+    <div class="mb-3 p-5">
+      <%= form.label :section_id, class: "form-label"%>
+      <%= form.number_field :section_id, class: "form-control" %>
+    </div>
+    
+    
+    <div class="mb-3 p-5">
+      <%= form.label :page_type, class: "form-label"%>
+      <%= form.text_area :page_type, class: "form-control" %>
+      
+      
+    </div>
+    <div class="mb-3 p-5">
+      <%= form.label :visible, class: "form-label"%>
+      <%= form.check_box :visible, class: "form-check-input" %>
+      
+      
+    </div>
+    <div class="mb-3 p-5">
+      <%= form.label :position, class: "form-label"%>
+      <%= form.number_field :position, class: "form-control" %>
+      
+      
+    </div>
+    <div class="mb-3 p-5">
+      <%= form.label :content, class: "form-label"%>
+      <%= form.text_area :content, class: "form-control" %>
+      
+      
+    </div>
+    
+    
+    <%= form.submit class: "btn btn-primary"%>
+    </div>
+  </form>
 
-  <div class="field">
-    <%= form.label :permalink %>
-    <%= form.text_field :permalink %>
-  </div>
-
-  <div class="field">
-    <%= form.label :visible %>
-    <%= form.check_box :visible %>
-  </div>
-
-  <div class="field">
-    <%= form.label :position %>
-    <%= form.number_field :position %>
-  </div>
-
-  <div class="field">
-    <%= form.label :content %>
-    <%= form.text_area :content %>
-  </div>
-
-  <div class="actions">
-    <%= form.submit %>
-  </div>
 <% end %>

@@ -1,14 +1,21 @@
 <p id="notice"><%= notice %></p>
-
-<p>
-  <strong>Title:</strong>
-  <%= @event.title %>
-</p>
-
+<div class="d-flex justify-content-center" >
+<div class="card" style="width: 18rem; background-color:aliceblue;">
+  <div class="card-body">
+    <h5 class="card-title"><%= @event.title %></h5>
+    
 <p>
   <strong>Details:</strong>
   <%= @event.details %>
 </p>
+  </div>
+</div>
+
+
+
+</div>
+
+
 
 <%= link_to 'Edit', edit_event_path(@event) %> |
 <%= link_to 'Back', events_path %>

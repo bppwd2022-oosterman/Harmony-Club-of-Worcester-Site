@@ -1,9 +1,9 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Title:</strong>
-  <%= @page.title %>
-</p>
+<div class="d-flex justify-content-center" >
+<div class="card" style="width: 18rem; background-color:aliceblue;">
+  <div class="card-body">
+    <h5 class="card-title"><%= @page.title %></h5>
 
 <p>
   <strong>Section:</strong>
@@ -34,6 +34,15 @@
   <strong>Content:</strong>
   <%= @page.content %>
 </p>
+  </div>
+</div>
+
+
+
+</div>
+
+
+
 
 <%= link_to 'Edit', edit_page_path(@page) %> |
 <%= link_to 'Back', pages_path %>

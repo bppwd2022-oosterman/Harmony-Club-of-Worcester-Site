@@ -11,22 +11,35 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= form.label :album_id %>
-    <%= form.number_field :album_id %>
-  </div>
 
-  <div class="field">
-    <%= form.label :title %>
-    <%= form.text_field :title %>
-  </div>
 
-  <div class="field">
-    <%= form.label :description %>
-    <%= form.text_area :description %>
-  </div>
+<form>
+  <div class="card" style="background-color:aliceblue">
+    <div class="mb-3 p-5">
+      <%= form.label :title, class: "form-label"%>
+      <%= form.text_field :title, class: "form-control" %>
+      
+      
+    </div>
+    
+    <div class="mb-3 p-5">
+      <%= form.label :album_id, class: "form-label"%>
+      <%= form.number_field :album_id, class: "form-control" %>
+    </div>
+    
+    
+    <div class="mb-3 p-5">
+      <%= form.label :description, class: "form-label"%>
+      <%= form.text_area :description, class: "form-control" %>
+      
+      
+    </div>
+    
+    
+    <%= form.submit class: "btn btn-primary"%>
+    </div>
+  </form>
 
-  <div class="actions">
-    <%= form.submit %>
-  </div>
+
+
 <% end %>

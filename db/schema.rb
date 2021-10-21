@@ -10,7 +10,21 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_10_21_130735) do
+ActiveRecord::Schema.define(version: 2021_10_21_143044) do
+
+  create_table "albums", force: :cascade do |t|
+    t.string "title"
+    t.text "description"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "events", force: :cascade do |t|
+    t.string "title"
+    t.text "details"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
 
   create_table "pages", force: :cascade do |t|
     t.string "title"
@@ -24,11 +38,26 @@ ActiveRecord::Schema.define(version: 2021_10_21_130735) do
     t.datetime "updated_at", precision: 6, null: false
   end
 
+  create_table "photos", force: :cascade do |t|
+    t.integer "album_id"
+    t.string "title"
+    t.text "description"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
   create_table "sections", force: :cascade do |t|
     t.string "location"
     t.string "title"
     t.boolean "visible"
     t.integer "position"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "sponsors", force: :cascade do |t|
+    t.string "title"
+    t.string "website"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end

@@ -1,14 +1,21 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Title:</strong>
-  <%= @album.title %>
-</p>
 
+<div class="d-flex justify-content-center" >
+<div class="card" style="width: 18rem; background-color:aliceblue;">
+  <div class="card-body">
+    <h5 class="card-title"><%= @album.title %></h5>
+    
 <p>
   <strong>Description:</strong>
   <%= @album.description %>
 </p>
+    
+  </div>
+</div>
 
+
+
+</div>
 <%= link_to 'Edit', edit_album_path(@album) %> |
 <%= link_to 'Back', albums_path %>

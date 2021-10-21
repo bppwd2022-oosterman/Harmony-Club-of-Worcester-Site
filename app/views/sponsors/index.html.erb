@@ -2,18 +2,20 @@
 
 <h1>Sponsors</h1>
 
-<table>
+<table class="table">
   <thead>
     <tr>
-      <th>Title</th>
-      <th>Website</th>
+    <th scope="col">#</th>
+      <th scope="col">Title</th>
+      <th scope="col">Website</th>
       <th colspan="3"></th>
     </tr>
   </thead>
 
   <tbody>
     <% @sponsors.each do |sponsor| %>
-      <tr>
+      <tr scope="row">
+      <td><%= sponsor.id%></td>
         <td><%= sponsor.title %></td>
         <td><%= sponsor.website %></td>
         <td><%= link_to 'Show', sponsor %></td>

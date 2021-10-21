@@ -1,5 +1,12 @@
 <p id="notice"><%= notice %></p>
 
+
+
+<div class="d-flex justify-content-center" >
+<div class="card" style="width: 18rem; background-color:aliceblue;">
+  <div class="card-body">
+    <h5 class="card-title"><%= @section.title %></h5>
+    
 <p>
   <strong>Location:</strong>
   <%= @section.location %>
@@ -7,7 +14,7 @@
 
 <p>
   <strong>Title:</strong>
-  <%= @section.title %>
+  
 </p>
 
 <p>
@@ -19,6 +26,19 @@
   <strong>Position:</strong>
   <%= @section.position %>
 </p>
+    
+  </div>
+</div>
+
+
+
+</div>
+
+
+
+
+
+
 
 <%= link_to 'Edit', edit_section_path(@section) %> |
 <%= link_to 'Back', sections_path %>
