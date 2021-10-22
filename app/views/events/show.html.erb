@@ -6,8 +6,11 @@
     
 <p>
   <strong>Details:</strong>
-  <%= @event.details %>
+  <%= raw @event.details %>
 </p>
+<% if @event.thumbnail.attached?%>
+  <%= image_tag @event.thumbnail, class:"img-fluid" %>
+<%end%>
   </div>
 </div>
 

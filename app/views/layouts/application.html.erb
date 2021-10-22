@@ -16,6 +16,9 @@
         
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+     <%= tinymce_assets %>
+    <script type="text/javascript" src="/assets/tinymce.js"></script>
+
   </head>
 
   <body>
@@ -45,8 +48,17 @@
                           <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                             <!--loop over pages-->
                             <% sec.pages.each do |p|%>
-
-                            <li><a class="dropdown-item" href="#"><%=p.title%></a></li>
+                              <% if p.page_type == "Basic Page"%>
+                            <li><%= link_to p.title, site_page_path(id: p.id), class:"dropdown-item" %></li>
+                              <%elsif p.page_type == "Internal URL"%>
+                              <li><%= link_to p.title, p.content, class:"dropdown-item" %></li>
+                              
+                              <%elsif p.page_type == "External URL"%>
+                              <li><%= link_to p.title, p.content, class:"dropdown-item", target: :_blank %></li>
+                              <%elsif p.page_type == "Document"%>
+                              <li><%= link_to p.title, p.content, class:"dropdown-item" %></li>
+                              
+                              <%end%>
                             <%end%>
                             <!--end loop over pages-->
                         <!--end loop over sections-->

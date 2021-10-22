@@ -1,0 +1,43 @@
+<h1>Events</h1>
+<div class="container ">
+<% @events.each do |ev| %>
+<% if ev.thumbnail.attached?%>
+        <div class="justify-content-center">
+            <div class="card mb-3 w-75" style="background-color:aliceblue;">
+                <div class="row g-0">
+                    <div class="col-md-4">
+                    
+                        
+                        <%= image_tag ev.thumbnail, class:"img-fluid rounded-start"  %>
+                        
+                    </div>
+                    <div class="col-md-8">
+                        <div class="card-body">
+                            <h5 class="card-title"><%=ev.title%></h5>
+                            <p class="card-text"><%=ev.details%></p>
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+        
+</div>
+<%else%>
+<div class="justify-content-center">
+            <div class="card mb-3 w-75" style="background-color:aliceblue;">
+                <div class="row g-0">
+                <div class="col">
+                        <div class="card-body">
+                            <h5 class="card-title"><%=ev.title%></h5>
+                            <p class="card-text"><%=ev.details%></p>
+                        </div>
+                        </div>
+                 
+            </div>
+        </div>
+
+
+</div>
+<%end%>
+<%end%>
+</div>

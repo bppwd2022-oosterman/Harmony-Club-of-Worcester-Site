@@ -12,16 +12,28 @@
   <% end %>
 
 <form>
+  
   <div class="card" style="background-color:aliceblue">
+    <div class="mb-3 p-5">
+    <label for="formFile" class="form-label">Photo (optional)</label>
+    <%= form.file_field :thumbnail, class: "form-control" %>
+
+    
+  </div>
     <div class="mb-3 p-5">
       <%= form.label :title, class: "form-label"%>
       <%= form.text_field :title, class: "form-control" %>
       
       
     </div>
+    
     <div class="mb-3 p-5">
+      
       <%= form.label :details, class: "form-label"%>
-      <%= form.text_area :details, class: "form-control" %>
+       <%= form.text_area :details, :class => "tinymce form-control" %>
+        <%= tinymce %>
+
+      <!--<#%= form.text_area :details, class: "form-control" %>-->
     </div>
     <%= form.submit class: "btn btn-primary"%>
     </div>

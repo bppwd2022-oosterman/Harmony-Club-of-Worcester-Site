@@ -53,11 +53,17 @@
     </div>
     <div class="mb-3 p-5">
       <%= form.label :content, class: "form-label"%>
-      <%= form.text_area :content, class: "form-control" %>
+      <%= form.text_area :content, :class => "tinymce form-control" %>
+        <%= tinymce %>
       
       
     </div>
-    
+    <div class="mb-3 p-5">
+      <%= form.label :destination, class: "form-label"%>
+      <%= form.text_field :destination, class: "form-control" %>
+      
+      
+    </div>
     
     <%= form.submit class: "btn btn-primary"%>
     </div>
